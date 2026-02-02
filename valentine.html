@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg,#af1e42);
+      color: #f5f5f5;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      scroll-snap-type: y mandatory;
+    }
+
+    section {
+      height: 100vh;
+      width: 100vw;
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      scroll-snap-align: start;
+      
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      line-height: 1.8;
+    }
+
+    img, video {
+      max-width: 80%;
+      max-height: 60vh;
+      border-radius: 18px;
+      margin-top: 30px;
+      object-fit: cover;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .proposal {
+      background: linear-gradient(100deg, #ff4d6d, #ff758f);
+      color: #fff;
+    }
+
+    .proposal button {
+      margin-top: 30px;
+      padding: 14px 36px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: #fff;
+      color: #ff4d6d;
+      transition: transform 0.3s ease;
+    }
+
+    .proposal button:hover {
+      transform: scale(1.08);
+    }
+    .button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.yes-btn, .no-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.yes-btn {
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.yes-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.6);
+}
+
+.yes-btn:active {
+  transform: scale(0.98);
+}
+
+.no-btn {
+  background-color: #ff6b6b;
+  color: white;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+.no-btn:hover {
+  background-color: #ff5252;
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.6);
+}
+
+.no-btn:active {
+  transform: scale(0.98);
+}
+
+    
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-110vh) translateX(15px);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 20px;
+  }
+  .container h1 {
+    font-size: 1.8rem;
+  }
+  button {
+    width: 100%;
+  }
+  .photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section data-aos="fade-up">
+    <h1>This isn’t a love story I imagined.</h1>
+    <p>It’s one I accidentally lived.</p>
+    <div class="hearts"></div>
+  </section>
+  
+
+  <!-- Bike rides -->
+  <section data-aos="fade-right">
+    <p>
+      Some of my favorite memories don’t have destinations.
+      Just bike rides, random turns, and conversations that didn’t need endings.
+    </p>
+    <img src="images/walking.jpg" alt="Bike Ride">
+  </section>
+
+  <!-- Eating together -->
+  <section data-aos="fade-left">
+    <p>
+      We didn’t need fancy places. Just shared plates, chicken lollipop,
+      and laughter that felt honest.
+    </p>
+    <video src="videos/shorter_video.mp4" autoplay loop playsinline></video>
+  </section>
+
+  <!-- Birthday -->
+  <section data-aos="zoom-in">
+    <p>
+      Celebrating your birthday made me realize some people don’t just age with time — they add meaning to it.
+    </p>
+    <img src="images/birthday.jpg" alt="Birthday">
+  </section>
+
+  <!-- Garba -->
+  <section data-aos="fade-up">
+    <p>
+      That one Garba picture reminds me how beautifully and gracefully, I see my different days with you.
+    </p>
+    <img src="images/garba.jpg" alt="Garba">
+  </section>
+
+  <!-- Flowers -->
+  <section data-aos="fade-right">
+    <p>
+      I’ve seen you hold flowers before,but what stayed with me was how softly you held the moment.
+    </p>
+    <img src="images/flowers.jpg" alt="Flowers">
+  </section>
+
+  <!-- Balloons -->
+  <section data-aos="flip-up">
+    <p>
+      Balloons were silly and unnecessary — just like happiness sometimes is.
+    </p>
+    <img src="images/balloons.jpg" alt="Balloons">
+  </section>
+
+  <!-- Proposal -->
+  <section class="proposal" data-aos="zoom-in" >
+    <p>
+      I don’t promise perfection. I promise presence.
+      Bike rides without reasons, food shared without counting,
+      and a life where memories matter more than poses.
+    </p>
+    <h1>Will you be my Valentine? ❤️</h1>
+     <h2 id="response">
+    </h2>
+    <img id="whenYes" src="images/purposal_yes.jpg" style="display: none;" alt="purposal_yes">
+    <h2 id="us_together" style="display: none;">Us Together</h2>
+     <div id="yesNoButtons" class="button-group" style="display: flex;">
+            <button id="yesBtn" class="yes-btn">🎉 Yes! 🎉</button>
+            <button id="noBtn" class="no-btn">No Thanks</button>
+        </div>    
+  </section>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1500, once: true });
+ 
+  // Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Script loaded!');
+    // Create initial falling hearts
+    for (let i = 0; i < 5; i++){
+            setTimeout(createHeart, i * 80);
+  }
+    // Get elements from the page
+    const valentineBtn = document.getElementById("valentineBtn");
+    const response = document.getElementById("response");
+    const yesNoButtons = document.getElementById("yesNoButtons");
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const photoGallery = document.getElementById("whenYes");
+    // const usTogether = document.getElementById("us_together");
+    const heartsContainer = document.querySelector(".hearts");
+
+    // Track button states
+    let noClickCount = 0;
+    const noMessages = ["Are you sure?", "Shru,Listena?","Please don't say no!","I promise I'll make you smile!","How about a hug instead?","I'll bring you hot chocolate!","Just say yes!"];
+    let yesFontSize = 16; // Starting font size in px
+    let noFontSize = 16; // Starting font size in px
+
+
+
+    // Yes button click - show the loving message and photos
+    yesBtn.addEventListener("click", () => {
+        console.log('Yes button clicked!');
+        response.innerHTML = "<br>Yayyy \u2764\ufe0f I love you, Shruti Mukherjee!  \ud83c\udf8a";
+        yesNoButtons.style.display = "none";
+        photoGallery.style.display = "flex";
+        
+
+        // Trigger extra hearts celebration
+        for (let i = 0; i < 15; i++) {
+            setTimeout(createHeart, i * 100);
+        }
+    });
+
+    // No button - shrink and show different messages
+    noBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // Show next message
+        if (noClickCount < noMessages.length) {
+            response.textContent = noMessages[noClickCount] + " \ud83d\ude08";
+        }
+
+        // Shrink No button
+        noFontSize *= 0.9; // Reduce by 30% each time
+        noBtn.style.fontSize = noFontSize + "px";
+        noBtn.style.padding = (8 * (noFontSize / 16)) + "px " + (12 * (noFontSize / 16)) + "px";
+
+        // Grow Yes button
+        yesFontSize *= 1.2; // Increase by 40% each time
+        yesBtn.style.fontSize = yesFontSize + "px";
+        yesBtn.style.padding = (12 * (yesFontSize / 16)) + "px " + (20 * (yesFontSize / 16)) + "px";
+
+        // Move No button away
+        moveNoButton();
+
+        noClickCount++;
+    });
+
+    // Function to create falling hearts
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.textContent = "\u2764\ufe0f"; // Red heart emoji
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = Math.random() * 2 + 3 + "s"; // 3-5 seconds
+        heart.style.fontSize = Math.random() * 20 + 20 + "px"; // 20-40px
+
+        heartsContainer.appendChild(heart);
+
+       
+    }
+
+    // Function to move No button to random position
+    function moveNoButton() {
+        const randomX = Math.random() * 60 - 30; // -30% to +30%
+        const randomY = Math.random() * 60 - 30;
+        noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    }
+
+    console.log('All event listeners attached!');
+});
+  </script>
+
+  
+
+</body>
+
+</html>
